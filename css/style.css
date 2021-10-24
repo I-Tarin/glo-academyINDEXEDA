@@ -18,7 +18,7 @@ body {
   background: rgba(238, 238, 238, 0.71);
   border-radius: 10px;
   display: flex;
-  max-width: 620;
+  max-width: 620px;
   flex-grow: 1;
   position: relative;
 }
@@ -26,7 +26,7 @@ body {
   background-color: transparent;
   border: none;
   width: 100%;
-  padding: 13px 20px;
+  padding: 13px 50px 13px 20px;
 }
 .search-button {
   background-color: transparent;
@@ -35,17 +35,11 @@ body {
   right: 0;
   top: 0;
   height: 100%;
-  padding-right: 18px;
-  padding-left: 18px;
+  padding: 0 18px;
   cursor: pointer;
 }
-/* ???
-* Согласно проэкта:
-* Отступ от кнопки "ВОЙТИ" до строки поиска 190пкс. 
-* Если ставить "margin-left: auto"(согласно урока),
-* то требования проэкта не выполняются.↓↓↓*/
 .auth {
-  margin-left: 190px;
+  margin-left: auto;
 }
 .login {
   background: #ebebeb;
@@ -80,4 +74,138 @@ body {
   display: block;
   padding: 5px;
   border-radius: 50%;
+}
+.slide {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  padding: 100px;
+}
+.slide-text-light {
+  background-color: grey;
+  color: white;
+}
+.slide-content {
+  position: relative;
+  max-width: 400px;
+}
+.slide-title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 51px;
+}
+.slide-text {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 23px;
+  margin-bottom: 30px;
+}
+.button-primary {
+  background: #f47322;
+  color: #fff;
+}
+.button-default {
+  background-color: #fff;
+  color: #5f5f61;
+}
+.button {
+  border-radius: 25px;
+  padding: 12px 50px;
+  display: inline-block;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 23px;
+}
+.slide-summer {
+  background-image: url('../img/summer.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slide:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.43) 40.45%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.promo {
+  margin-top: 50px;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, auto));
+}
+.card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 32px;
+  max-width: 570px;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card:before {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+.card-text-light {
+  color: #fff;
+}
+.card-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 23px;
+  margin-top: 4px;
+  margin-bottom: 21px;
+}
+.card-descriptions {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  max-width: 200px;
+}
+.card-price {
+  display: block;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 23px;
+  margin-bottom: 8px;
+}
+.card-delivery {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  margin-bottom: 25px;
+}
+.sweet-basket {
+  background: url('../img/sweet-basket.png') no-repeat center / cover;
+  z-index: -2;
+}
+.Minimum-effort {
+  background: url('../img/minimum-effort.png') no-repeat center / cover;
+  z-index: -2;
 }
